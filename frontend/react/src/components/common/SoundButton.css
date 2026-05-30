@@ -1,0 +1,29 @@
+/* 모든 버튼의 공통 스타일 */
+.sound-btn {
+  background-color: transparent;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  border: none;
+  cursor: pointer;
+
+  transition:
+    transform 0.1s ease,
+    filter 0.1s ease;
+
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* 마우스 호버 - PC 전용 */
+@media (hover: hover) {
+  .sound-btn:hover {
+    transform: scale(1.05);
+    filter: brightness(1.1);
+  }
+}
+
+/* 클릭 - PC/모바일 */
+.sound-btn:active {
+  transform: scale(0.95);
+  filter: brightness(0.8);
+}

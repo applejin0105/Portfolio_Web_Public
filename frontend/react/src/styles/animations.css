@@ -1,0 +1,132 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes fadeInBlack {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dropDownCenter {
+  0% {
+    top: -100%;
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -70%);
+  }
+}
+
+@keyframes slideUpCenter {
+  0% {
+    top: 50%;
+    opacity: 1;
+    transform: translate(-50%, -70%);
+  }
+  100% {
+    top: -100%;
+    opacity: 0;
+    transform: translate(-50%, -70%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translateX(0);
+  }
+  25% {
+    transform: translateX(-5px);
+  }
+  75% {
+    transform: translateX(5px);
+  }
+}
+
+.anim-fade-in {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.anim-pulse {
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.delay-100 {
+  animation-delay: 0.1s;
+}
+.delay-200 {
+  animation-delay: 0.2s;
+}
+.delay-300 {
+  animation-delay: 0.3s;
+}
+.delay-500 {
+  animation-delay: 0.5s;
+}
+
+.anim-drop-center {
+  position: absolute;
+  left: 50%;
+  animation: dropDownCenter 1.2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+.transition-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  opacity: 0;
+  z-index: 9999;
+  pointer-events: none;
+}
+
+.transition-overlay.active {
+  pointer-events: auto;
+  animation: fadeInBlack 3.5s ease-in forwards;
+  animation-delay: 0.5s;
+}
+
+.page-fade-in {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.page-fade-out {
+  opacity: 1;
+  animation: fadeOut 1s ease-in forwards;
+}

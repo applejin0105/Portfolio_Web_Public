@@ -1,0 +1,116 @@
+@import "./variables.css";
+@import "./animations.css";
+
+@font-face {
+  font-family: "Kotra";
+  src: url("../assets/fonts/KOTRA_BOLD.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Excelsior";
+  src: url("../assets/fonts/ExcelsiorSans.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mikodacs";
+  src: url("../assets/fonts/Mikodacs.woff2") format("woff2");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Segoeui";
+  src: url("../assets/fonts/segoeuib.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Blinker";
+  src: url("../assets/fonts/Blinker_Bold.ttf") format("truetype");
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Digit";
+  src: url("../assets/fonts/DS_DIGIB.TTF") format("truetype");
+  font-display: swap;
+}
+
+.custom-cursor-container {
+  width: 100vw;
+  height: 100vh;
+}
+
+.cursor-default {
+  cursor: url("../assets/images/ui/mouse_off.png"), auto;
+}
+
+.cursor-clicked {
+  cursor: url("../assets/images/ui/mouse_on.png"), auto;
+}
+
+:root {
+  --bg-color: #000000;
+}
+
+html,
+body,
+#root {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-color);
+  overflow: hidden !important;
+}
+
+* {
+  box-sizing: border-box;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  -webkit-user-drag: none;
+  -webkit-touch-callout: none;
+  outline: none !important;
+  -webkit-tap-highlight-color: transparent;
+}
+
+*:focus,
+*:active,
+*:focus-visible {
+  outline: none !important;
+  border: none !important;
+}
+
+body {
+  font-family: var(--font-main);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+img {
+  pointer-events: none;
+}
+
+button,
+input,
+a,
+.interactive {
+  pointer-events: auto;
+  cursor: pointer;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #dbbd96;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 255, 255, 0.1);
+}

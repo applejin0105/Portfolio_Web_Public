@@ -1,0 +1,42 @@
+# node_modules: npm/yarn 패키지 폴더
+node_modules/
+
+# 빌드 산출물 (배포 대상, 소스 아님)
+dist/
+
+# 로그 파일
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# 환경 변수 파일 (API키 등 민감정보)
+.env
+.env.*
+
+# macOS 시스템 파일
+.DS_Store
+
+# Windows 시스템 파일
+Thumbs.db
+
+# IDE/Editor 관련
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# 테스트 커버리지
+coverage/
+
+# TypeScript 빌드 결과
+*.tsbuildinfo
+
+# Optional: local config, temp
+*.local
+
+# 빌드시 생성되는 report/asset
+*.zip
+*.tgz
+*.tar

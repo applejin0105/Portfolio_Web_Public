@@ -1,0 +1,67 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "target": "ESNext",
+        "lib": [
+            "DOM",
+            "DOM.Iterable",
+            "ESNext"
+        ],
+        "paths": {
+            "@/*": [
+                "./src/*"
+            ],
+            "@styles/": [
+                "./src/styles/*"
+            ],
+            "@pageStyles/": [
+                "./src/styles/pages/*"
+            ],
+            "@fonts/*": [
+                "./src/assets/fonts/*"
+            ],
+            "@images/*": [
+                "./src/assets/images/*"
+            ],
+            "@bg/*": [
+                "./src/assets/images/bg/*"
+            ],
+            "@etc/*": [
+                "./src/assets/images/etc/*"
+            ],
+            "@thumbnails/*": [
+                "./src/assets/images/thumbnails/*"
+            ],
+            "@buttons/*": [
+                "./src/assets/images/ui/buttons/*"
+            ],
+            "@frames/*": [
+                "./src/assets/images/ui/frames/*"
+            ],
+            "@logos/*": [
+                "./src/assets/images/ui/logos/*"
+            ],
+            "@sounds/*": [
+                "./src/assets/sounds/*"
+            ],
+            "@components/*": [
+                "./src/components/*"
+            ],
+            "@pages/*": [
+                "./src/pages/*"
+            ],
+            "@data/*": [
+                "./src/data/*"
+            ]
+        },
+        "jsx": "react-jsx"
+    },
+    "include": [
+        "src"
+    ],
+    "exclude": [
+        "node_modules",
+        "dist",
+        "build"
+    ]
+}

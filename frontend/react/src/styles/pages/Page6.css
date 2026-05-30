@@ -1,0 +1,413 @@
+@import "../../styles/animations.css";
+
+.page-wrapper {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.scalable-wrapper {
+  width: 1920px;
+  height: 1080px;
+  transform-origin: center center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.element-playedgame {
+  background-color: #000000;
+  height: 1080px;
+  position: relative;
+  width: 1920px;
+  overflow: hidden;
+}
+
+.BG-playedgame {
+  aspect-ratio: 1;
+  height: 1080px;
+  left: 0;
+  top: 0;
+  width: 1920px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.btn-back-wrapper {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  z-index: 100;
+  position: absolute;
+  top: 22px;
+  left: 16px;
+  transition: transform 0.2s;
+  opacity: 0;
+}
+
+.btn-back-wrapper.enter {
+  animation: fadeIn 0.5s ease-out forwards;
+}
+
+.btn-back-wrapper.exit {
+  animation: fadeOut 0.5s ease-out forwards;
+}
+
+.btn-back {
+  width: 116px;
+  height: 113px;
+  object-fit: cover;
+  display: block;
+}
+
+.btn-back:hover {
+  transform: scale(1.1);
+}
+
+.btn-prev {
+  height: 89px;
+  width: 77px;
+  position: absolute;
+  top: 495px;
+  left: 16px;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 20;
+  transition: transform 0.2s;
+}
+
+.btn-prev:hover {
+  transform: scale(1.1);
+}
+
+.btn-next {
+  height: 89px;
+  width: 77px;
+  position: absolute;
+  top: 495px;
+  left: 1827px;
+  cursor: pointer;
+  pointer-events: auto;
+  z-index: 20;
+  transition: transform 0.2s;
+}
+
+.btn-next:hover {
+  transform: scale(1.1);
+}
+
+.game-carousel-viewport {
+  position: absolute;
+  top: 118px;
+  left: 0;
+  width: 1920px;
+  height: 844px;
+  z-index: 10;
+  pointer-events: none;
+}
+
+.game-carousel-track {
+  display: flex;
+  gap: 220px;
+  height: 100%;
+  width: max-content;
+  transition: transform 0.5s cubic-bezier(0.25, 1, 0.5, 1);
+  will-change: transform;
+  pointer-events: auto;
+}
+
+.game-container {
+  position: relative;
+  width: 1702px;
+  height: 844px;
+}
+
+.BG-container {
+  width: 1700px;
+  height: 844px;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.thumbnail-wrapper {
+  position: absolute;
+  top: 20px;
+  left: 44px;
+  width: 600px;
+  height: 800px;
+  z-index: 5;
+  cursor: pointer;
+  overflow: hidden;
+  transition:
+    transform 0.2s,
+    border-color 0.2s;
+  border: 5px solid #ffd800;
+  box-sizing: border-box;
+}
+
+.thumbnail-wrapper:hover {
+  transform: scale(1.02);
+  outline: 3px solid #ffd800;
+}
+
+.thumbnail {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.comment {
+  color: #e8d4be;
+  font-family: "KOTRA_BOLD", Helvetica, sans-serif;
+  font-size: 30px;
+  font-weight: 700;
+  position: absolute;
+  top: 650px;
+  left: 700px;
+  width: 980px;
+  margin: 0;
+  z-index: 1;
+  height: 170px;
+  overflow-y: auto;
+  white-space: pre-wrap;
+  line-height: 1.5;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+.comment-text {
+  display: block;
+  width: 100%;
+}
+
+.comment-img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 10px auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
+.comment::-webkit-scrollbar {
+  display: none;
+}
+
+.scores {
+  position: absolute;
+  top: 130px;
+  left: 700px;
+  width: 980px;
+  height: 463px;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+}
+
+.game-title-text {
+  font-family: "KOTRA_BOLD", Helvetica, sans-serif;
+  font-size: 60px;
+  color: #ffd800;
+  line-height: 1.3;
+  padding-bottom: 100px;
+  margin-top: -85px;
+  margin-bottom: 10px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  width: 100%;
+  text-shadow: 2px 2px 4px #000;
+}
+
+.index-indicator {
+  position: absolute;
+  top: 40px;
+  right: 50px;
+  font-family: "Mikodacs", Helvetica, sans-serif;
+  font-size: 40px;
+  color: #dbbd96;
+  font-weight: 700;
+  z-index: 10;
+}
+
+.score-row {
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+}
+
+.label {
+  align-items: center;
+  color: #e8d4be;
+  display: flex;
+  font-family: "Mikodacs", Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  height: 60px;
+  justify-content: center;
+}
+
+.originality {
+  gap: 219px;
+  margin-bottom: 4px;
+}
+.originality .label {
+  width: 187px;
+}
+
+.developers-soul {
+  gap: 100px;
+  margin-bottom: 4px;
+}
+.developers-soul .label {
+  width: 306px;
+}
+
+.uniqueness {
+  gap: 194px;
+  margin-bottom: 4px;
+}
+.uniqueness .label {
+  width: 212px;
+}
+
+.atmosphere-vibe {
+  gap: 51px;
+  margin-bottom: 4px;
+}
+.atmosphere-vibe .label {
+  width: 355px;
+}
+
+.immersion-density {
+  gap: 59px;
+  margin-bottom: 4px;
+}
+.immersion-density .label {
+  width: 347px;
+}
+
+.memorable-impact {
+  gap: 58px;
+  margin-bottom: 4px;
+}
+
+.memorable-impact .label {
+  width: 348px;
+}
+
+.play-time {
+  gap: 331px;
+  margin-top: 23px;
+}
+
+.play-time .label {
+  width: 206px;
+  color: #ffd800;
+}
+
+.score {
+  align-items: center;
+  color: #e8d4be;
+  display: flex;
+  font-family: "Mikodacs", Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  height: 60px;
+  justify-content: flex-end;
+  width: 570px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.play-time-h {
+  align-items: center;
+  color: #ffd800;
+  display: flex;
+  font-family: "Mikodacs", Helvetica, sans-serif;
+  font-size: 45px;
+  font-weight: 400;
+  height: 60px;
+  justify-content: flex-end;
+  width: 431px;
+  padding-right: 10px;
+  box-sizing: border-box;
+}
+
+.mouse-tooltip {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.95);
+  color: #ffd800;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-size: 20px;
+  font-family: "KOTRA_BOLD", sans-serif;
+  white-space: nowrap;
+  pointer-events: none;
+  z-index: 9999;
+  border: 1px solid #e8d4be;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+  animation: fadeIn 0.2s ease-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.page-enter {
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+}
+
+.page-exit {
+  opacity: 1;
+  animation: fadeOut 1s ease-in forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+.box {
+  position: relative;
+  width: 1702px;
+  height: 844px;
+  flex-shrink: 0;
+}
+
+.game-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}

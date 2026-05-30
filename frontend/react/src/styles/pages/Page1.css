@@ -1,0 +1,187 @@
+@import "../../styles/animations.css";
+
+.page-wrapper {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  overflow: hidden;
+  background-color: #000;
+}
+
+.page-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.element-warning {
+  position: absolute;
+  top: -5%;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.Trigger-Warning {
+  position: absolute;
+  top: 143px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 463px;
+  height: 229px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  z-index: 1;
+}
+
+.Test-Warning,
+.Word-Warning {
+  width: 194px;
+  height: auto;
+  object-fit: contain;
+}
+
+.Word-Warning {
+  margin-top: 3px;
+}
+
+.tech-stack-container {
+  position: absolute;
+  top: 287px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1724px;
+  height: 606px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.tech-column {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  font-family: "KOTRA_BOLD", sans-serif;
+  font-size: 45px;
+  font-weight: 700;
+  color: #ce0000;
+  width: 400px;
+}
+
+.tech-column.left {
+  align-items: flex-start;
+  text-align: left;
+}
+
+.tech-column.right {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.main-text-container {
+  position: absolute;
+  top: 400px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1319px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  z-index: 5;
+}
+
+.warning-header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.warning-icon {
+  width: 92px;
+  height: auto;
+}
+
+.warning-title {
+  font-family: "KOTRA_BOLD", sans-serif;
+  font-size: 65px;
+  font-weight: 700;
+  color: #ffc800;
+  margin: 0;
+  line-height: 1;
+}
+
+.warning-body {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.primary-text,
+.secondary-text {
+  font-family: "Segoeui", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 1.6;
+  color: #ffc800;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.primary-text > span,
+.secondary-text > span {
+  display: block;
+  margin-bottom: 10px;
+  word-break: keep-all;
+}
+
+.primary-text {
+  color: #ffc800;
+  margin-bottom: 40px;
+}
+
+.secondary-text {
+  color: #ec0000;
+}
+
+.highlight {
+  color: #ffc800;
+  font-weight: bold;
+}
+
+.emphasis {
+  color: #ff4d4d;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.Touch-To-Start {
+  position: absolute;
+  top: 564px;
+  left: 20%;
+  transform: translateX(-50%);
+  width: 771px;
+  height: auto;
+  cursor: pointer;
+  z-index: 10;
+
+  animation: pulse 2s infinite ease-in-out;
+  transition: filter 0.2s;
+
+  pointer-events: auto !important;
+}
+
+.Touch-To-Start:hover {
+  filter: brightness(1.2);
+}
